@@ -1,0 +1,2 @@
+total_orders,delivered_orders,cancelled_orders,total_items,average_items_per_order,total_product_value,total_freight_value,average_freight_per_order,total_order_value,average_order_value,average_delivery_days,late_delivery_rate,average_review_score
+99441,96478,625,112650.0,1.1328325338643015,13591643.7,2251909.54,22.64568477790851,15843553.24,159.32616566607334,12.921854231938946,0.07870998883760219,4.05523040462854
