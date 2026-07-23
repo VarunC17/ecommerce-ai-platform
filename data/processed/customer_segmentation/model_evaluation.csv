@@ -1,0 +1,8 @@
+k,silhouette_score,evaluation_sample_size,selected_model,feature_count,selected_table,customer_identifier_column
+2,0.5120798075054348,10000,True,11,customer_features,customer_id
+3,0.5056626042653138,10000,False,11,customer_features,customer_id
+5,0.48281006760343664,10000,False,11,customer_features,customer_id
+4,0.4827209507026331,10000,False,11,customer_features,customer_id
+7,0.25118340652233656,10000,False,11,customer_features,customer_id
+6,0.24316556279411206,10000,False,11,customer_features,customer_id
+8,0.21772484651564483,10000,False,11,customer_features,customer_id
