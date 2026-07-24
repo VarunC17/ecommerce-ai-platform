@@ -1,0 +1,10 @@
+metric,value
+customer_count,99441
+total_historical_clv,15843553.239999998
+average_historical_clv,159.32616566607334
+median_historical_clv,104.56
+minimum_historical_clv,0.0
+maximum_historical_clv,13664.08
+monetary_feature_used,total_spend
+duration_feature_used,customer_lifetime_days
+clv_methodology,Historical observed customer value
