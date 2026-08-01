@@ -1,0 +1,26 @@
+{
+    "model_settings": {
+        "storage_mode": "import",
+        "schema": "dashboard",
+        "recommended_visuals": [
+            "cards",
+            "kpi",
+            "line_chart",
+            "bar_chart",
+            "scatter",
+            "matrix",
+            "map",
+            "heatmap",
+            "decomposition_tree",
+            "key_influencers"
+        ],
+        "features": [
+            "drillthrough",
+            "cross_filtering",
+            "cross_highlighting",
+            "time_intelligence",
+            "forecasting"
+        ]
+    },
+    "relationships": "Empty DataFrame\nColumns: []\nIndex: []"
+}

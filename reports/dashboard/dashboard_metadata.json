@@ -1,0 +1,431 @@
+{
+    "initial_summary": {
+        "schemas": 3,
+        "tables": 54,
+        "columns": 457,
+        "keys": 54,
+        "generated_at": "2026-08-01 18:05:15.220120"
+    },
+    "dataset_classification": "                schema                                   table  \\\n0          ai_insights                       management_report   \n1          ai_insights                           business_kpis   \n2          ai_insights                       business_insights   \n3          ai_insights                       executive_summary   \n4          ai_insights                          business_risks   \n5          ai_insights                  business_opportunities   \n6          ai_insights                     recommended_actions   \n7          ai_insights                   powerbi_business_kpis   \n8          ai_insights               powerbi_business_insights   \n9          ai_insights               powerbi_management_report   \n10         ai_insights             powerbi_recommended_actions   \n11         ai_insights                          export_summary   \n12         ai_insights                      validation_results   \n13         ai_insights                    data_quality_summary   \n14         ai_insights                         project_metrics   \n15           analytics                   customer_segmentation   \n16           analytics                         segment_summary   \n17           analytics                    segment_distribution   \n18           analytics  customer_segmentation_model_evaluation   \n19           analytics                   segment_feature_means   \n20           analytics                 customer_lifetime_value   \n21           analytics                     clv_segment_summary   \n22           analytics                     clv_overall_summary   \n23           analytics                          clv_validation   \n24           analytics              customer_churn_predictions   \n25           analytics            customer_churn_model_metrics   \n26  feature_engineered                          order_features   \n27  feature_engineered                       customer_features   \n28  feature_engineered                        product_features   \n29  feature_engineered                         seller_features   \n30  feature_engineered                  monthly_sales_features   \n31  feature_engineered                       category_features   \n32         forecasting                        model_evaluation   \n33         forecasting               historical_sales_forecast   \n34         forecasting                   future_sales_forecast   \n35              public                               customers   \n36              public                             geolocation   \n37              public                             order_items   \n38              public                          order_payments   \n39              public                           order_reviews   \n40              public                                  orders   \n41              public                                products   \n42              public                                 sellers   \n43              public                    category_translation   \n44              public                  churn_model_comparison   \n45              public              customer_churn_predictions   \n46     recommendations                 product_recommendations   \n47     recommendations               recommendation_evaluation   \n48     recommendations             recommendation_data_quality   \n49     recommendations         powerbi_product_recommendations   \n50     sales_analytics                      overall_sales_kpis   \n51     sales_analytics                           monthly_sales   \n52     sales_analytics                    order_status_summary   \n53     sales_analytics                    delivery_performance   \n\n           dataset_type  row_count  \\\n0    supporting_dataset          1   \n1   dimension_candidate         15   \n2   dimension_candidate          5   \n3    supporting_dataset          2   \n4    supporting_dataset          0   \n5   dimension_candidate          5   \n6    supporting_dataset          5   \n7   dimension_candidate         15   \n8   dimension_candidate          5   \n9    supporting_dataset          1   \n10   supporting_dataset          5   \n11   supporting_dataset          1   \n12   supporting_dataset          7   \n13   supporting_dataset          7   \n14   supporting_dataset          1   \n15       fact_candidate      99441   \n16   supporting_dataset          2   \n17   supporting_dataset          2   \n18  dimension_candidate          7   \n19   supporting_dataset          2   \n20       fact_candidate      99441   \n21   supporting_dataset          3   \n22   supporting_dataset          9   \n23  dimension_candidate          9   \n24       fact_candidate      86924   \n25   supporting_dataset          1   \n26       fact_candidate      99441   \n27       fact_candidate      99441   \n28       fact_candidate      32951   \n29       fact_candidate       3095   \n30   supporting_dataset         25   \n31   supporting_dataset         74   \n32   supporting_dataset          2   \n33       fact_candidate       1299   \n34   supporting_dataset         30   \n35       fact_candidate      99441   \n36       fact_candidate     738332   \n37       fact_candidate     112650   \n38       fact_candidate     103886   \n39       fact_candidate      99224   \n40       fact_candidate      99441   \n41       fact_candidate      32951   \n42       fact_candidate       3095   \n43   supporting_dataset         71   \n44   supporting_dataset          2   \n45       fact_candidate      99441   \n46       fact_candidate     986670   \n47   supporting_dataset          1   \n48  dimension_candidate          8   \n49       fact_candidate     986670   \n50   supporting_dataset          1   \n51   supporting_dataset         25   \n52   supporting_dataset          8   \n53   supporting_dataset          2   \n\n                                       candidate_keys  \n0   [report_generated, business_domains, total_kpi...  \n1                                               [kpi]  \n2                                [title, description]  \n3                   [summary_type, message, priority]  \n4                                                  []  \n5                          [opportunity, description]  \n6                                           [finding]  \n7                                               [kpi]  \n8                                [title, description]  \n9   [report_generated, business_domains, total_kpi...  \n10                                          [finding]  \n11  [generated_at, business_tables, powerbi_tables...  \n12                                         [artifact]  \n13                                            [table]  \n14  [execution_timestamp, validated_source_tables,...  \n15  [customer_id, average_delivery_days, recency_d...  \n16  [cluster_id, mean_customer_zip_code_prefix, me...  \n17  [cluster_id, segment_name, customer_count, cus...  \n18                              [k, silhouette_score]  \n19  [cluster_id, segment_name, customer_zip_code_p...  \n20                                      [customer_id]  \n21  [clv_segment, customer_count, total_historical...  \n22                                    [metric, value]  \n23                                 [validation_check]  \n24                               [customer_unique_id]  \n25  [model, threshold, accuracy, precision, recall...  \n26  [order_id, customer_id, order_purchase_timesta...  \n27  [customer_id, customer_unique_id, average_deli...  \n28                                       [product_id]  \n29                                        [seller_id]  \n30  [purchase_month_start, total_orders, total_rev...  \n31  [product_category_name, total_revenue, average...  \n32                           [Model, MAE, RMSE, WAPE]  \n33                                  [forecast_period]  \n34                                  [forecast_period]  \n35                  [customer_id, customer_unique_id]  \n36                                                 []  \n37                                                 []  \n38                                         [order_id]  \n39     [review_id, order_id, review_answer_timestamp]  \n40  [order_id, customer_id, order_purchase_timesta...  \n41                                       [product_id]  \n42                                        [seller_id]  \n43  [product_category_name, product_category_name_...  \n44     [model, accuracy, precision, recall, f1_score]  \n45  [customer_identifier, first_order_date, last_o...  \n46                                                 []  \n47  [method, customers_evaluated, precision_at_k, ...  \n48                                  [validation_name]  \n49                                                 []  \n50  [total_orders, delivered_orders, cancelled_ord...  \n51  [sales_month, total_orders, total_order_value,...  \n52                        [order_status, order_count]  \n53  [delivery_status, order_count, average_deliver...  ",
+    "star_schema_design": {
+        "model_type": "star_schema",
+        "facts": [
+            {
+                "fact_name": "fact_customer_segmentation",
+                "source_schema": "analytics",
+                "source_table": "customer_segmentation",
+                "grain": [
+                    "customer_id",
+                    "average_delivery_days",
+                    "recency_days"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_customer_lifetime_value",
+                "source_schema": "analytics",
+                "source_table": "customer_lifetime_value",
+                "grain": [
+                    "customer_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_customer_churn_predictions",
+                "source_schema": "analytics",
+                "source_table": "customer_churn_predictions",
+                "grain": [
+                    "customer_unique_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_order_features",
+                "source_schema": "feature_engineered",
+                "source_table": "order_features",
+                "grain": [
+                    "order_id",
+                    "customer_id",
+                    "order_purchase_timestamp",
+                    "order_approved_at",
+                    "order_delivered_carrier_date",
+                    "order_delivered_customer_date",
+                    "delivery_days",
+                    "estimated_delivery_days",
+                    "delivery_delay_days"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_customer_features",
+                "source_schema": "feature_engineered",
+                "source_table": "customer_features",
+                "grain": [
+                    "customer_id",
+                    "customer_unique_id",
+                    "average_delivery_days",
+                    "average_delivery_delay_days",
+                    "first_purchase_date",
+                    "last_purchase_date",
+                    "recency_days"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_product_features",
+                "source_schema": "feature_engineered",
+                "source_table": "product_features",
+                "grain": [
+                    "product_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_seller_features",
+                "source_schema": "feature_engineered",
+                "source_table": "seller_features",
+                "grain": [
+                    "seller_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_historical_sales_forecast",
+                "source_schema": "forecasting",
+                "source_table": "historical_sales_forecast",
+                "grain": [
+                    "forecast_period"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_customers",
+                "source_schema": "public",
+                "source_table": "customers",
+                "grain": [
+                    "customer_id",
+                    "customer_unique_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_geolocation",
+                "source_schema": "public",
+                "source_table": "geolocation",
+                "grain": [],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_order_items",
+                "source_schema": "public",
+                "source_table": "order_items",
+                "grain": [],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_order_payments",
+                "source_schema": "public",
+                "source_table": "order_payments",
+                "grain": [
+                    "order_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_order_reviews",
+                "source_schema": "public",
+                "source_table": "order_reviews",
+                "grain": [
+                    "review_id",
+                    "order_id",
+                    "review_answer_timestamp"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_orders",
+                "source_schema": "public",
+                "source_table": "orders",
+                "grain": [
+                    "order_id",
+                    "customer_id",
+                    "order_purchase_timestamp",
+                    "order_approved_at",
+                    "order_delivered_carrier_date",
+                    "order_delivered_customer_date"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_products",
+                "source_schema": "public",
+                "source_table": "products",
+                "grain": [
+                    "product_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_sellers",
+                "source_schema": "public",
+                "source_table": "sellers",
+                "grain": [
+                    "seller_id"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_customer_churn_predictions",
+                "source_schema": "public",
+                "source_table": "customer_churn_predictions",
+                "grain": [
+                    "customer_identifier",
+                    "first_order_date",
+                    "last_order_date"
+                ],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_product_recommendations",
+                "source_schema": "recommendations",
+                "source_table": "product_recommendations",
+                "grain": [],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            },
+            {
+                "fact_name": "fact_powerbi_product_recommendations",
+                "source_schema": "recommendations",
+                "source_table": "powerbi_product_recommendations",
+                "grain": [],
+                "powerbi_usage": [
+                    "measures",
+                    "aggregations",
+                    "charts",
+                    "analysis"
+                ]
+            }
+        ],
+        "dimensions": [
+            {
+                "dimension_name": "dim_business_kpis",
+                "source_schema": "ai_insights",
+                "source_table": "business_kpis",
+                "candidate_keys": [
+                    "kpi"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            },
+            {
+                "dimension_name": "dim_business_insights",
+                "source_schema": "ai_insights",
+                "source_table": "business_insights",
+                "candidate_keys": [
+                    "title",
+                    "description"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            },
+            {
+                "dimension_name": "dim_business_opportunities",
+                "source_schema": "ai_insights",
+                "source_table": "business_opportunities",
+                "candidate_keys": [
+                    "opportunity",
+                    "description"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            },
+            {
+                "dimension_name": "dim_powerbi_business_kpis",
+                "source_schema": "ai_insights",
+                "source_table": "powerbi_business_kpis",
+                "candidate_keys": [
+                    "kpi"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            },
+            {
+                "dimension_name": "dim_powerbi_business_insights",
+                "source_schema": "ai_insights",
+                "source_table": "powerbi_business_insights",
+                "candidate_keys": [
+                    "title",
+                    "description"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            },
+            {
+                "dimension_name": "dim_customer_segmentation_model_evaluation",
+                "source_schema": "analytics",
+                "source_table": "customer_segmentation_model_evaluation",
+                "candidate_keys": [
+                    "k",
+                    "silhouette_score"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            },
+            {
+                "dimension_name": "dim_clv_validation",
+                "source_schema": "analytics",
+                "source_table": "clv_validation",
+                "candidate_keys": [
+                    "validation_check"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            },
+            {
+                "dimension_name": "dim_recommendation_data_quality",
+                "source_schema": "recommendations",
+                "source_table": "recommendation_data_quality",
+                "candidate_keys": [
+                    "validation_name"
+                ],
+                "powerbi_usage": [
+                    "slicers",
+                    "filters",
+                    "relationships",
+                    "drillthrough"
+                ]
+            }
+        ],
+        "created_at": "2026-08-01 18:10:10.701812"
+    },
+    "table_plan": "                               dashboard_table       type  \\\n0                   fact_customer_segmentation       fact   \n1                 fact_customer_lifetime_value       fact   \n2              fact_customer_churn_predictions       fact   \n3                          fact_order_features       fact   \n4                       fact_customer_features       fact   \n5                        fact_product_features       fact   \n6                         fact_seller_features       fact   \n7               fact_historical_sales_forecast       fact   \n8                               fact_customers       fact   \n9                             fact_geolocation       fact   \n10                            fact_order_items       fact   \n11                         fact_order_payments       fact   \n12                          fact_order_reviews       fact   \n13                                 fact_orders       fact   \n14                               fact_products       fact   \n15                                fact_sellers       fact   \n16             fact_customer_churn_predictions       fact   \n17                fact_product_recommendations       fact   \n18        fact_powerbi_product_recommendations       fact   \n19                           dim_business_kpis  dimension   \n20                       dim_business_insights  dimension   \n21                  dim_business_opportunities  dimension   \n22                   dim_powerbi_business_kpis  dimension   \n23               dim_powerbi_business_insights  dimension   \n24  dim_customer_segmentation_model_evaluation  dimension   \n25                          dim_clv_validation  dimension   \n26             dim_recommendation_data_quality  dimension   \n\n                                               source priority  \n0                  (analytics, customer_segmentation)     high  \n1                (analytics, customer_lifetime_value)     high  \n2             (analytics, customer_churn_predictions)     high  \n3                (feature_engineered, order_features)     high  \n4             (feature_engineered, customer_features)     high  \n5              (feature_engineered, product_features)     high  \n6               (feature_engineered, seller_features)     high  \n7            (forecasting, historical_sales_forecast)     high  \n8                                 (public, customers)     high  \n9                               (public, geolocation)     high  \n10                              (public, order_items)     high  \n11                           (public, order_payments)     high  \n12                            (public, order_reviews)     high  \n13                                   (public, orders)     high  \n14                                 (public, products)     high  \n15                                  (public, sellers)     high  \n16               (public, customer_churn_predictions)     high  \n17         (recommendations, product_recommendations)     high  \n18  (recommendations, powerbi_product_recommendati...     high  \n19                       (ai_insights, business_kpis)     high  \n20                   (ai_insights, business_insights)     high  \n21              (ai_insights, business_opportunities)     high  \n22               (ai_insights, powerbi_business_kpis)     high  \n23           (ai_insights, powerbi_business_insights)     high  \n24  (analytics, customer_segmentation_model_evalua...     high  \n25                        (analytics, clv_validation)     high  \n26     (recommendations, recommendation_data_quality)     high  ",
+    "time_columns": "                schema                       table  \\\n0          ai_insights             project_metrics   \n1          ai_insights             project_metrics   \n2            analytics       customer_segmentation   \n3            analytics     customer_lifetime_value   \n4            analytics  customer_churn_predictions   \n5   feature_engineered              order_features   \n6   feature_engineered              order_features   \n7   feature_engineered              order_features   \n8   feature_engineered              order_features   \n9   feature_engineered              order_features   \n10  feature_engineered              order_features   \n11  feature_engineered              order_features   \n12  feature_engineered              order_features   \n13  feature_engineered              order_features   \n14  feature_engineered              order_features   \n15  feature_engineered              order_features   \n16  feature_engineered           customer_features   \n17  feature_engineered           customer_features   \n18  feature_engineered           customer_features   \n19  feature_engineered      monthly_sales_features   \n20              public                 order_items   \n21              public               order_reviews   \n22              public               order_reviews   \n23              public                      orders   \n24              public                      orders   \n25              public                      orders   \n26              public                      orders   \n27              public                      orders   \n28              public                      orders   \n29              public  customer_churn_predictions   \n30              public  customer_churn_predictions   \n31              public  customer_churn_predictions   \n32     sales_analytics               monthly_sales   \n\n                           column              time_role  \n0             execution_timestamp  candidate_date_column  \n1         validated_source_tables  candidate_date_column  \n2          customer_lifetime_days  candidate_date_column  \n3      customer_lifetime_duration  candidate_date_column  \n4          prediction_cutoff_date  candidate_date_column  \n5        order_purchase_timestamp  candidate_date_column  \n6    order_delivered_carrier_date  candidate_date_column  \n7   order_delivered_customer_date  candidate_date_column  \n8   order_estimated_delivery_date  candidate_date_column  \n9                      order_year  candidate_date_column  \n10                    order_month  candidate_date_column  \n11                     is_on_time  candidate_date_column  \n12                  purchase_year  candidate_date_column  \n13                 purchase_month  candidate_date_column  \n14                  purchase_date  candidate_date_column  \n15           purchase_month_start  candidate_date_column  \n16            first_purchase_date  candidate_date_column  \n17             last_purchase_date  candidate_date_column  \n18         customer_lifetime_days  candidate_date_column  \n19           purchase_month_start  candidate_date_column  \n20            shipping_limit_date  candidate_date_column  \n21           review_creation_date  candidate_date_column  \n22        review_answer_timestamp  candidate_date_column  \n23       order_purchase_timestamp  candidate_date_column  \n24   order_delivered_carrier_date  candidate_date_column  \n25  order_delivered_customer_date  candidate_date_column  \n26  order_estimated_delivery_date  candidate_date_column  \n27                     order_year  candidate_date_column  \n28                    order_month  candidate_date_column  \n29               first_order_date  candidate_date_column  \n30                last_order_date  candidate_date_column  \n31                  lifetime_days  candidate_date_column  \n32                    sales_month  candidate_date_column  ",
+    "summary": {
+        "datasets_classified": 54,
+        "fact_candidates": 19,
+        "dimension_candidates": 8,
+        "time_columns_found": 33,
+        "created_at": "2026-08-01 18:10:50.903369"
+    },
+    "optimization_function": "optimize_dataframe",
+    "summary_tables": "             dataset  records               generated_at\n0       fact_exports       19 2026-08-01 18:19:46.361660\n1       fact_skipped        0 2026-08-01 18:19:46.361669\n2  dimension_exports        8 2026-08-01 18:19:46.361672\n3  dimension_skipped        0 2026-08-01 18:19:46.361675",
+    "drillthrough": "                               dashboard_table  drillthrough_enabled  \\\n0                   fact_customer_segmentation                  True   \n1                 fact_customer_lifetime_value                  True   \n2              fact_customer_churn_predictions                  True   \n3                          fact_order_features                  True   \n4                       fact_customer_features                  True   \n5                        fact_product_features                  True   \n6                         fact_seller_features                  True   \n7               fact_historical_sales_forecast                  True   \n8                               fact_customers                  True   \n9                             fact_geolocation                  True   \n10                            fact_order_items                  True   \n11                         fact_order_payments                  True   \n12                          fact_order_reviews                  True   \n13                                 fact_orders                  True   \n14                               fact_products                  True   \n15                                fact_sellers                  True   \n16             fact_customer_churn_predictions                  True   \n17                fact_product_recommendations                  True   \n18        fact_powerbi_product_recommendations                  True   \n19                           dim_business_kpis                  True   \n20                       dim_business_insights                  True   \n21                  dim_business_opportunities                  True   \n22                   dim_powerbi_business_kpis                  True   \n23               dim_powerbi_business_insights                  True   \n24  dim_customer_segmentation_model_evaluation                  True   \n25                          dim_clv_validation                  True   \n26             dim_recommendation_data_quality                  True   \n\n                                    recommended_usage  \n0   [detail_view, customer_analysis, product_analy...  \n1   [detail_view, customer_analysis, product_analy...  \n2   [detail_view, customer_analysis, product_analy...  \n3   [detail_view, customer_analysis, product_analy...  \n4   [detail_view, customer_analysis, product_analy...  \n5   [detail_view, customer_analysis, product_analy...  \n6   [detail_view, customer_analysis, product_analy...  \n7   [detail_view, customer_analysis, product_analy...  \n8   [detail_view, customer_analysis, product_analy...  \n9   [detail_view, customer_analysis, product_analy...  \n10  [detail_view, customer_analysis, product_analy...  \n11  [detail_view, customer_analysis, product_analy...  \n12  [detail_view, customer_analysis, product_analy...  \n13  [detail_view, customer_analysis, product_analy...  \n14  [detail_view, customer_analysis, product_analy...  \n15  [detail_view, customer_analysis, product_analy...  \n16  [detail_view, customer_analysis, product_analy...  \n17  [detail_view, customer_analysis, product_analy...  \n18  [detail_view, customer_analysis, product_analy...  \n19  [detail_view, customer_analysis, product_analy...  \n20  [detail_view, customer_analysis, product_analy...  \n21  [detail_view, customer_analysis, product_analy...  \n22  [detail_view, customer_analysis, product_analy...  \n23  [detail_view, customer_analysis, product_analy...  \n24  [detail_view, customer_analysis, product_analy...  \n25  [detail_view, customer_analysis, product_analy...  \n26  [detail_view, customer_analysis, product_analy...  ",
+    "metadata_table": "       metadata_component object_type  record_count               generated_at\n0         initial_summary        dict           5.0 2026-08-01 18:20:28.692757\n1  dataset_classification   DataFrame          54.0 2026-08-01 18:20:28.692778\n2      star_schema_design        dict           4.0 2026-08-01 18:20:28.692781\n3              table_plan   DataFrame          27.0 2026-08-01 18:20:28.692785\n4            time_columns   DataFrame          33.0 2026-08-01 18:20:28.692788\n5                 summary        dict           5.0 2026-08-01 18:20:28.692790\n6   optimization_function         str           NaN 2026-08-01 18:20:28.692793\n7          summary_tables   DataFrame           4.0 2026-08-01 18:20:28.692795\n8            drillthrough   DataFrame          27.0 2026-08-01 18:20:28.692798"
+}

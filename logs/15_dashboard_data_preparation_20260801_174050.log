@@ -1,0 +1,24 @@
+2026-08-01 17:40:50,597 | INFO | Logging initialized.
+2026-08-01 17:40:50,599 | INFO | Run ID: 20260801_174050
+2026-08-01 17:40:50,603 | INFO | Notebook: 15_dashboard_data_preparation
+2026-08-01 17:41:02,875 | INFO | Database configuration captured securely.
+2026-08-01 17:41:20,573 | INFO | All registries initialized.
+2026-08-01 17:41:27,389 | INFO | Execution state initialized.
+2026-08-01 17:42:17,266 | INFO | Section 1 (Initialization) completed successfully.
+2026-08-01 17:42:36,019 | INFO | Database connection string successfully constructed.
+2026-08-01 17:42:43,692 | INFO | Database objects initialized.
+2026-08-01 17:43:33,371 | INFO | Creating SQLAlchemy Engine started.
+2026-08-01 17:43:33,512 | INFO | Creating SQLAlchemy Engine completed in 0.14 seconds.
+2026-08-01 17:43:33,513 | INFO | SQLAlchemy engine successfully created.
+2026-08-01 17:43:39,104 | INFO | Testing Database Connection started.
+2026-08-01 17:43:39,522 | INFO | Testing Database Connection completed in 0.42 seconds.
+2026-08-01 17:43:39,523 | INFO | Database connection validated.
+2026-08-01 17:43:45,698 | INFO | Creating Database Inspector started.
+2026-08-01 17:43:45,701 | INFO | Creating Database Inspector completed in 0.00 seconds.
+2026-08-01 17:43:45,703 | INFO | Database inspector initialized.
+2026-08-01 17:43:52,285 | INFO | Opening Persistent Database Connection started.
+2026-08-01 17:43:52,288 | INFO | Opening Persistent Database Connection completed in 0.00 seconds.
+2026-08-01 17:43:52,290 | INFO | Persistent database connection established.
+2026-08-01 17:43:58,083 | INFO | Database metadata successfully collected.
+2026-08-01 17:44:03,673 | INFO | Database information saved to C:\Users\asus\Documents\ECOMMERCE-AI-PLATFORM\reports\dashboard\database_information.json
+2026-08-01 17:44:09,282 | INFO | Database health report registered.

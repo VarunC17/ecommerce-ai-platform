@@ -1,0 +1,7 @@
+{
+    "database": "ecommerce_ai_db",
+    "current_user": "postgres",
+    "server_version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35227, 64-bit",
+    "server_time": "2026-08-01 17:43:58.080832+05:30",
+    "search_path": "\"$user\", public"
+}

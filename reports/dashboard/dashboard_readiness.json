@@ -1,0 +1,11 @@
+{
+    "database_connection": true,
+    "dashboard_schema_created": true,
+    "fact_tables": 19,
+    "dimension_tables": 8,
+    "calendar_available": true,
+    "data_dictionary_available": true,
+    "powerbi_configuration_available": true,
+    "ready_for_powerbi": true,
+    "generated_at": "2026-08-01 18:22:16.691862"
+}

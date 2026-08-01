@@ -1,0 +1,458 @@
+schema,table,column,data_type,nullable,primary_key,foreign_key,dashboard_usage,business_meaning,description
+ai_insights,management_report,report_generated,TIMESTAMP,True,False,False,dimension,Report Generated,report_generated from management_report
+ai_insights,management_report,business_domains,BIGINT,True,False,False,measure,Business Domains,business_domains from management_report
+ai_insights,management_report,total_kpis,BIGINT,True,False,False,measure,Total Kpis,total_kpis from management_report
+ai_insights,management_report,total_insights,BIGINT,True,False,False,measure,Total Insights,total_insights from management_report
+ai_insights,management_report,high_priority,BIGINT,True,False,False,measure,High Priority,high_priority from management_report
+ai_insights,management_report,medium_priority,BIGINT,True,False,False,measure,Medium Priority,medium_priority from management_report
+ai_insights,management_report,low_priority,BIGINT,True,False,False,measure,Low Priority,low_priority from management_report
+ai_insights,business_kpis,kpi,TEXT,True,False,False,dimension,Kpi,kpi from business_kpis
+ai_insights,business_kpis,value,DOUBLE PRECISION,True,False,False,measure,Value,value from business_kpis
+ai_insights,business_kpis,business_area,TEXT,True,False,False,dimension,Business Area,business_area from business_kpis
+ai_insights,business_kpis,source_table,TEXT,True,False,False,dimension,Source Table,source_table from business_kpis
+ai_insights,business_kpis,confidence,TEXT,True,False,False,dimension,Confidence,confidence from business_kpis
+ai_insights,business_kpis,generated_at,TIMESTAMP,True,False,False,dimension,Generated At,generated_at from business_kpis
+ai_insights,business_insights,category,TEXT,True,False,False,dimension,Category,category from business_insights
+ai_insights,business_insights,title,TEXT,True,False,False,dimension,Title,title from business_insights
+ai_insights,business_insights,description,TEXT,True,False,False,dimension,Description,description from business_insights
+ai_insights,business_insights,priority,TEXT,True,False,False,dimension,Priority,priority from business_insights
+ai_insights,business_insights,confidence,TEXT,True,False,False,dimension,Confidence,confidence from business_insights
+ai_insights,business_insights,source,TEXT,True,False,False,dimension,Source,source from business_insights
+ai_insights,business_insights,generated_at,TIMESTAMP,True,False,False,dimension,Generated At,generated_at from business_insights
+ai_insights,executive_summary,summary_type,TEXT,True,False,False,dimension,Summary Type,summary_type from executive_summary
+ai_insights,executive_summary,message,TEXT,True,False,False,dimension,Message,message from executive_summary
+ai_insights,executive_summary,priority,TEXT,True,False,False,dimension,Priority,priority from executive_summary
+ai_insights,business_opportunities,business_area,TEXT,True,False,False,dimension,Business Area,business_area from business_opportunities
+ai_insights,business_opportunities,opportunity,TEXT,True,False,False,dimension,Opportunity,opportunity from business_opportunities
+ai_insights,business_opportunities,description,TEXT,True,False,False,dimension,Description,description from business_opportunities
+ai_insights,business_opportunities,confidence,TEXT,True,False,False,dimension,Confidence,confidence from business_opportunities
+ai_insights,recommended_actions,category,TEXT,True,False,False,dimension,Category,category from recommended_actions
+ai_insights,recommended_actions,finding,TEXT,True,False,False,dimension,Finding,finding from recommended_actions
+ai_insights,recommended_actions,priority,TEXT,True,False,False,dimension,Priority,priority from recommended_actions
+ai_insights,recommended_actions,recommended_action,TEXT,True,False,False,dimension,Recommended Action,recommended_action from recommended_actions
+ai_insights,powerbi_business_kpis,kpi,TEXT,True,False,False,dimension,Kpi,kpi from powerbi_business_kpis
+ai_insights,powerbi_business_kpis,value,DOUBLE PRECISION,True,False,False,measure,Value,value from powerbi_business_kpis
+ai_insights,powerbi_business_kpis,business_area,TEXT,True,False,False,dimension,Business Area,business_area from powerbi_business_kpis
+ai_insights,powerbi_business_kpis,source_table,TEXT,True,False,False,dimension,Source Table,source_table from powerbi_business_kpis
+ai_insights,powerbi_business_kpis,confidence,TEXT,True,False,False,dimension,Confidence,confidence from powerbi_business_kpis
+ai_insights,powerbi_business_kpis,generated_at,TIMESTAMP,True,False,False,dimension,Generated At,generated_at from powerbi_business_kpis
+ai_insights,powerbi_business_insights,category,TEXT,True,False,False,dimension,Category,category from powerbi_business_insights
+ai_insights,powerbi_business_insights,title,TEXT,True,False,False,dimension,Title,title from powerbi_business_insights
+ai_insights,powerbi_business_insights,description,TEXT,True,False,False,dimension,Description,description from powerbi_business_insights
+ai_insights,powerbi_business_insights,priority,TEXT,True,False,False,dimension,Priority,priority from powerbi_business_insights
+ai_insights,powerbi_business_insights,confidence,TEXT,True,False,False,dimension,Confidence,confidence from powerbi_business_insights
+ai_insights,powerbi_business_insights,source,TEXT,True,False,False,dimension,Source,source from powerbi_business_insights
+ai_insights,powerbi_business_insights,generated_at,TIMESTAMP,True,False,False,dimension,Generated At,generated_at from powerbi_business_insights
+ai_insights,powerbi_management_report,report_generated,TIMESTAMP,True,False,False,dimension,Report Generated,report_generated from powerbi_management_report
+ai_insights,powerbi_management_report,business_domains,BIGINT,True,False,False,measure,Business Domains,business_domains from powerbi_management_report
+ai_insights,powerbi_management_report,total_kpis,BIGINT,True,False,False,measure,Total Kpis,total_kpis from powerbi_management_report
+ai_insights,powerbi_management_report,total_insights,BIGINT,True,False,False,measure,Total Insights,total_insights from powerbi_management_report
+ai_insights,powerbi_management_report,high_priority,BIGINT,True,False,False,measure,High Priority,high_priority from powerbi_management_report
+ai_insights,powerbi_management_report,medium_priority,BIGINT,True,False,False,measure,Medium Priority,medium_priority from powerbi_management_report
+ai_insights,powerbi_management_report,low_priority,BIGINT,True,False,False,measure,Low Priority,low_priority from powerbi_management_report
+ai_insights,powerbi_recommended_actions,category,TEXT,True,False,False,dimension,Category,category from powerbi_recommended_actions
+ai_insights,powerbi_recommended_actions,finding,TEXT,True,False,False,dimension,Finding,finding from powerbi_recommended_actions
+ai_insights,powerbi_recommended_actions,priority,TEXT,True,False,False,dimension,Priority,priority from powerbi_recommended_actions
+ai_insights,powerbi_recommended_actions,recommended_action,TEXT,True,False,False,dimension,Recommended Action,recommended_action from powerbi_recommended_actions
+ai_insights,export_summary,generated_at,TIMESTAMP,True,False,False,dimension,Generated At,generated_at from export_summary
+ai_insights,export_summary,business_tables,BIGINT,True,False,False,measure,Business Tables,business_tables from export_summary
+ai_insights,export_summary,powerbi_tables,BIGINT,True,False,False,measure,Powerbi Tables,powerbi_tables from export_summary
+ai_insights,export_summary,successful_exports,BIGINT,True,False,False,measure,Successful Exports,successful_exports from export_summary
+ai_insights,export_summary,failed_exports,BIGINT,True,False,False,measure,Failed Exports,failed_exports from export_summary
+ai_insights,validation_results,artifact,TEXT,True,False,False,dimension,Artifact,artifact from validation_results
+ai_insights,validation_results,exists,BOOLEAN,True,False,False,dimension,Exists,exists from validation_results
+ai_insights,validation_results,rows,BIGINT,True,False,False,measure,Rows,rows from validation_results
+ai_insights,validation_results,columns,BIGINT,True,False,False,measure,Columns,columns from validation_results
+ai_insights,validation_results,empty,BOOLEAN,True,False,False,dimension,Empty,empty from validation_results
+ai_insights,validation_results,status,TEXT,True,False,False,dimension,Status,status from validation_results
+ai_insights,data_quality_summary,table,TEXT,True,False,False,dimension,Table,table from data_quality_summary
+ai_insights,data_quality_summary,rows,BIGINT,True,False,False,measure,Rows,rows from data_quality_summary
+ai_insights,data_quality_summary,columns,BIGINT,True,False,False,measure,Columns,columns from data_quality_summary
+ai_insights,data_quality_summary,duplicate_rows,BIGINT,True,False,False,measure,Duplicate Rows,duplicate_rows from data_quality_summary
+ai_insights,data_quality_summary,missing_values,BIGINT,True,False,False,measure,Missing Values,missing_values from data_quality_summary
+ai_insights,data_quality_summary,completeness_percent,DOUBLE PRECISION,True,False,False,measure,Completeness Percent,completeness_percent from data_quality_summary
+ai_insights,project_metrics,execution_timestamp,TIMESTAMP,True,False,False,dimension,Execution Timestamp,execution_timestamp from project_metrics
+ai_insights,project_metrics,validated_source_tables,BIGINT,True,False,False,dimension,Validated Source Tables,validated_source_tables from project_metrics
+ai_insights,project_metrics,business_domains,BIGINT,True,False,False,measure,Business Domains,business_domains from project_metrics
+ai_insights,project_metrics,generated_kpis,BIGINT,True,False,False,measure,Generated Kpis,generated_kpis from project_metrics
+ai_insights,project_metrics,generated_insights,BIGINT,True,False,False,measure,Generated Insights,generated_insights from project_metrics
+ai_insights,project_metrics,postgres_exports,BIGINT,True,False,False,measure,Postgres Exports,postgres_exports from project_metrics
+ai_insights,project_metrics,powerbi_exports,BIGINT,True,False,False,measure,Powerbi Exports,powerbi_exports from project_metrics
+analytics,customer_segmentation,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from customer_segmentation
+analytics,customer_segmentation,customer_zip_code_prefix,DOUBLE PRECISION,True,False,False,measure,Customer Zip Code Prefix,customer_zip_code_prefix from customer_segmentation
+analytics,customer_segmentation,total_orders,DOUBLE PRECISION,True,False,False,measure,Total Orders,total_orders from customer_segmentation
+analytics,customer_segmentation,total_spend,DOUBLE PRECISION,True,False,False,measure,Total Spend,total_spend from customer_segmentation
+analytics,customer_segmentation,average_order_value,DOUBLE PRECISION,True,False,False,measure,Average Order Value,average_order_value from customer_segmentation
+analytics,customer_segmentation,total_items_purchased,DOUBLE PRECISION,True,False,False,measure,Total Items Purchased,total_items_purchased from customer_segmentation
+analytics,customer_segmentation,average_review_score,DOUBLE PRECISION,True,False,False,measure,Average Review Score,average_review_score from customer_segmentation
+analytics,customer_segmentation,average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Average Delivery Days,average_delivery_days from customer_segmentation
+analytics,customer_segmentation,average_delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Average Delivery Delay Days,average_delivery_delay_days from customer_segmentation
+analytics,customer_segmentation,late_orders,DOUBLE PRECISION,True,False,False,measure,Late Orders,late_orders from customer_segmentation
+analytics,customer_segmentation,cancelled_orders,DOUBLE PRECISION,True,False,False,measure,Cancelled Orders,cancelled_orders from customer_segmentation
+analytics,customer_segmentation,customer_lifetime_days,DOUBLE PRECISION,True,False,False,dimension,Customer Lifetime Days,customer_lifetime_days from customer_segmentation
+analytics,customer_segmentation,purchase_frequency,DOUBLE PRECISION,True,False,False,measure,Purchase Frequency,purchase_frequency from customer_segmentation
+analytics,customer_segmentation,recency_days,DOUBLE PRECISION,True,False,False,measure,Recency Days,recency_days from customer_segmentation
+analytics,customer_segmentation,frequency,DOUBLE PRECISION,True,False,False,measure,Frequency,frequency from customer_segmentation
+analytics,customer_segmentation,monetary,DOUBLE PRECISION,True,False,False,measure,Monetary,monetary from customer_segmentation
+analytics,customer_segmentation,cluster_id,BIGINT,True,False,False,measure,Cluster Id,cluster_id from customer_segmentation
+analytics,customer_segmentation,segment_name,TEXT,True,False,False,dimension,Segment Name,segment_name from customer_segmentation
+analytics,segment_summary,cluster_id,BIGINT,True,False,False,measure,Cluster Id,cluster_id from segment_summary
+analytics,segment_summary,mean_customer_zip_code_prefix,DOUBLE PRECISION,True,False,False,measure,Mean Customer Zip Code Prefix,mean_customer_zip_code_prefix from segment_summary
+analytics,segment_summary,median_customer_zip_code_prefix,DOUBLE PRECISION,True,False,False,measure,Median Customer Zip Code Prefix,median_customer_zip_code_prefix from segment_summary
+analytics,segment_summary,min_customer_zip_code_prefix,DOUBLE PRECISION,True,False,False,measure,Min Customer Zip Code Prefix,min_customer_zip_code_prefix from segment_summary
+analytics,segment_summary,max_customer_zip_code_prefix,DOUBLE PRECISION,True,False,False,measure,Max Customer Zip Code Prefix,max_customer_zip_code_prefix from segment_summary
+analytics,segment_summary,mean_total_spend,DOUBLE PRECISION,True,False,False,measure,Mean Total Spend,mean_total_spend from segment_summary
+analytics,segment_summary,median_total_spend,DOUBLE PRECISION,True,False,False,measure,Median Total Spend,median_total_spend from segment_summary
+analytics,segment_summary,min_total_spend,DOUBLE PRECISION,True,False,False,measure,Min Total Spend,min_total_spend from segment_summary
+analytics,segment_summary,max_total_spend,DOUBLE PRECISION,True,False,False,measure,Max Total Spend,max_total_spend from segment_summary
+analytics,segment_summary,mean_average_order_value,DOUBLE PRECISION,True,False,False,measure,Mean Average Order Value,mean_average_order_value from segment_summary
+analytics,segment_summary,median_average_order_value,DOUBLE PRECISION,True,False,False,measure,Median Average Order Value,median_average_order_value from segment_summary
+analytics,segment_summary,min_average_order_value,DOUBLE PRECISION,True,False,False,measure,Min Average Order Value,min_average_order_value from segment_summary
+analytics,segment_summary,max_average_order_value,DOUBLE PRECISION,True,False,False,measure,Max Average Order Value,max_average_order_value from segment_summary
+analytics,segment_summary,mean_total_items_purchased,DOUBLE PRECISION,True,False,False,measure,Mean Total Items Purchased,mean_total_items_purchased from segment_summary
+analytics,segment_summary,median_total_items_purchased,DOUBLE PRECISION,True,False,False,measure,Median Total Items Purchased,median_total_items_purchased from segment_summary
+analytics,segment_summary,min_total_items_purchased,DOUBLE PRECISION,True,False,False,measure,Min Total Items Purchased,min_total_items_purchased from segment_summary
+analytics,segment_summary,max_total_items_purchased,DOUBLE PRECISION,True,False,False,measure,Max Total Items Purchased,max_total_items_purchased from segment_summary
+analytics,segment_summary,mean_average_review_score,DOUBLE PRECISION,True,False,False,measure,Mean Average Review Score,mean_average_review_score from segment_summary
+analytics,segment_summary,median_average_review_score,DOUBLE PRECISION,True,False,False,measure,Median Average Review Score,median_average_review_score from segment_summary
+analytics,segment_summary,min_average_review_score,DOUBLE PRECISION,True,False,False,measure,Min Average Review Score,min_average_review_score from segment_summary
+analytics,segment_summary,max_average_review_score,DOUBLE PRECISION,True,False,False,measure,Max Average Review Score,max_average_review_score from segment_summary
+analytics,segment_summary,mean_average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Mean Average Delivery Days,mean_average_delivery_days from segment_summary
+analytics,segment_summary,median_average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Median Average Delivery Days,median_average_delivery_days from segment_summary
+analytics,segment_summary,min_average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Min Average Delivery Days,min_average_delivery_days from segment_summary
+analytics,segment_summary,max_average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Max Average Delivery Days,max_average_delivery_days from segment_summary
+analytics,segment_summary,mean_average_delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Mean Average Delivery Delay Days,mean_average_delivery_delay_days from segment_summary
+analytics,segment_summary,median_average_delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Median Average Delivery Delay Days,median_average_delivery_delay_days from segment_summary
+analytics,segment_summary,min_average_delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Min Average Delivery Delay Days,min_average_delivery_delay_days from segment_summary
+analytics,segment_summary,max_average_delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Max Average Delivery Delay Days,max_average_delivery_delay_days from segment_summary
+analytics,segment_summary,mean_late_orders,DOUBLE PRECISION,True,False,False,measure,Mean Late Orders,mean_late_orders from segment_summary
+analytics,segment_summary,median_late_orders,DOUBLE PRECISION,True,False,False,measure,Median Late Orders,median_late_orders from segment_summary
+analytics,segment_summary,min_late_orders,DOUBLE PRECISION,True,False,False,measure,Min Late Orders,min_late_orders from segment_summary
+analytics,segment_summary,max_late_orders,DOUBLE PRECISION,True,False,False,measure,Max Late Orders,max_late_orders from segment_summary
+analytics,segment_summary,mean_cancelled_orders,DOUBLE PRECISION,True,False,False,measure,Mean Cancelled Orders,mean_cancelled_orders from segment_summary
+analytics,segment_summary,median_cancelled_orders,DOUBLE PRECISION,True,False,False,measure,Median Cancelled Orders,median_cancelled_orders from segment_summary
+analytics,segment_summary,min_cancelled_orders,DOUBLE PRECISION,True,False,False,measure,Min Cancelled Orders,min_cancelled_orders from segment_summary
+analytics,segment_summary,max_cancelled_orders,DOUBLE PRECISION,True,False,False,measure,Max Cancelled Orders,max_cancelled_orders from segment_summary
+analytics,segment_summary,mean_recency_days,DOUBLE PRECISION,True,False,False,measure,Mean Recency Days,mean_recency_days from segment_summary
+analytics,segment_summary,median_recency_days,DOUBLE PRECISION,True,False,False,measure,Median Recency Days,median_recency_days from segment_summary
+analytics,segment_summary,min_recency_days,DOUBLE PRECISION,True,False,False,measure,Min Recency Days,min_recency_days from segment_summary
+analytics,segment_summary,max_recency_days,DOUBLE PRECISION,True,False,False,measure,Max Recency Days,max_recency_days from segment_summary
+analytics,segment_summary,mean_monetary,DOUBLE PRECISION,True,False,False,measure,Mean Monetary,mean_monetary from segment_summary
+analytics,segment_summary,median_monetary,DOUBLE PRECISION,True,False,False,measure,Median Monetary,median_monetary from segment_summary
+analytics,segment_summary,min_monetary,DOUBLE PRECISION,True,False,False,measure,Min Monetary,min_monetary from segment_summary
+analytics,segment_summary,max_monetary,DOUBLE PRECISION,True,False,False,measure,Max Monetary,max_monetary from segment_summary
+analytics,segment_summary,customer_count,BIGINT,True,False,False,measure,Customer Count,customer_count from segment_summary
+analytics,segment_summary,segment_score,DOUBLE PRECISION,True,False,False,measure,Segment Score,segment_score from segment_summary
+analytics,segment_summary,segment_name,TEXT,True,False,False,dimension,Segment Name,segment_name from segment_summary
+analytics,segment_distribution,cluster_id,BIGINT,True,False,False,measure,Cluster Id,cluster_id from segment_distribution
+analytics,segment_distribution,segment_name,TEXT,True,False,False,dimension,Segment Name,segment_name from segment_distribution
+analytics,segment_distribution,customer_count,BIGINT,True,False,False,measure,Customer Count,customer_count from segment_distribution
+analytics,segment_distribution,customer_percentage,DOUBLE PRECISION,True,False,False,measure,Customer Percentage,customer_percentage from segment_distribution
+analytics,customer_segmentation_model_evaluation,k,BIGINT,True,False,False,measure,K,k from customer_segmentation_model_evaluation
+analytics,customer_segmentation_model_evaluation,silhouette_score,DOUBLE PRECISION,True,False,False,measure,Silhouette Score,silhouette_score from customer_segmentation_model_evaluation
+analytics,customer_segmentation_model_evaluation,evaluation_sample_size,BIGINT,True,False,False,measure,Evaluation Sample Size,evaluation_sample_size from customer_segmentation_model_evaluation
+analytics,customer_segmentation_model_evaluation,selected_model,BOOLEAN,True,False,False,dimension,Selected Model,selected_model from customer_segmentation_model_evaluation
+analytics,customer_segmentation_model_evaluation,feature_count,BIGINT,True,False,False,measure,Feature Count,feature_count from customer_segmentation_model_evaluation
+analytics,customer_segmentation_model_evaluation,selected_table,TEXT,True,False,False,dimension,Selected Table,selected_table from customer_segmentation_model_evaluation
+analytics,customer_segmentation_model_evaluation,customer_identifier_column,TEXT,True,False,False,dimension,Customer Identifier Column,customer_identifier_column from customer_segmentation_model_evaluation
+analytics,segment_feature_means,cluster_id,BIGINT,True,False,False,measure,Cluster Id,cluster_id from segment_feature_means
+analytics,segment_feature_means,segment_name,TEXT,True,False,False,dimension,Segment Name,segment_name from segment_feature_means
+analytics,segment_feature_means,customer_zip_code_prefix,DOUBLE PRECISION,True,False,False,measure,Customer Zip Code Prefix,customer_zip_code_prefix from segment_feature_means
+analytics,segment_feature_means,total_spend,DOUBLE PRECISION,True,False,False,measure,Total Spend,total_spend from segment_feature_means
+analytics,segment_feature_means,average_order_value,DOUBLE PRECISION,True,False,False,measure,Average Order Value,average_order_value from segment_feature_means
+analytics,segment_feature_means,total_items_purchased,DOUBLE PRECISION,True,False,False,measure,Total Items Purchased,total_items_purchased from segment_feature_means
+analytics,segment_feature_means,average_review_score,DOUBLE PRECISION,True,False,False,measure,Average Review Score,average_review_score from segment_feature_means
+analytics,segment_feature_means,average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Average Delivery Days,average_delivery_days from segment_feature_means
+analytics,segment_feature_means,average_delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Average Delivery Delay Days,average_delivery_delay_days from segment_feature_means
+analytics,segment_feature_means,late_orders,DOUBLE PRECISION,True,False,False,measure,Late Orders,late_orders from segment_feature_means
+analytics,segment_feature_means,cancelled_orders,DOUBLE PRECISION,True,False,False,measure,Cancelled Orders,cancelled_orders from segment_feature_means
+analytics,segment_feature_means,recency_days,DOUBLE PRECISION,True,False,False,measure,Recency Days,recency_days from segment_feature_means
+analytics,segment_feature_means,monetary,DOUBLE PRECISION,True,False,False,measure,Monetary,monetary from segment_feature_means
+analytics,customer_lifetime_value,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from customer_lifetime_value
+analytics,customer_lifetime_value,historical_customer_value,DOUBLE PRECISION,True,False,False,measure,Historical Customer Value,historical_customer_value from customer_lifetime_value
+analytics,customer_lifetime_value,customer_lifetime_duration,DOUBLE PRECISION,True,False,False,dimension,Customer Lifetime Duration,customer_lifetime_duration from customer_lifetime_value
+analytics,customer_lifetime_value,historical_clv,DOUBLE PRECISION,True,False,False,measure,Historical Clv,historical_clv from customer_lifetime_value
+analytics,customer_lifetime_value,estimated_future_clv,DOUBLE PRECISION,True,False,False,measure,Estimated Future Clv,estimated_future_clv from customer_lifetime_value
+analytics,customer_lifetime_value,clv_segment,TEXT,True,False,False,dimension,Clv Segment,clv_segment from customer_lifetime_value
+analytics,clv_segment_summary,clv_segment,TEXT,True,False,False,dimension,Clv Segment,clv_segment from clv_segment_summary
+analytics,clv_segment_summary,customer_count,BIGINT,True,False,False,measure,Customer Count,customer_count from clv_segment_summary
+analytics,clv_segment_summary,total_historical_clv,DOUBLE PRECISION,True,False,False,measure,Total Historical Clv,total_historical_clv from clv_segment_summary
+analytics,clv_segment_summary,average_historical_clv,DOUBLE PRECISION,True,False,False,measure,Average Historical Clv,average_historical_clv from clv_segment_summary
+analytics,clv_segment_summary,median_historical_clv,DOUBLE PRECISION,True,False,False,measure,Median Historical Clv,median_historical_clv from clv_segment_summary
+analytics,clv_segment_summary,minimum_historical_clv,DOUBLE PRECISION,True,False,False,measure,Minimum Historical Clv,minimum_historical_clv from clv_segment_summary
+analytics,clv_segment_summary,maximum_historical_clv,DOUBLE PRECISION,True,False,False,measure,Maximum Historical Clv,maximum_historical_clv from clv_segment_summary
+analytics,clv_segment_summary,clv_value_share,DOUBLE PRECISION,True,False,False,measure,Clv Value Share,clv_value_share from clv_segment_summary
+analytics,clv_segment_summary,customer_share,DOUBLE PRECISION,True,False,False,measure,Customer Share,customer_share from clv_segment_summary
+analytics,clv_overall_summary,metric,TEXT,True,False,False,dimension,Metric,metric from clv_overall_summary
+analytics,clv_overall_summary,value,TEXT,True,False,False,dimension,Value,value from clv_overall_summary
+analytics,clv_validation,validation_check,TEXT,True,False,False,dimension,Validation Check,validation_check from clv_validation
+analytics,clv_validation,validation_value,TEXT,True,False,False,dimension,Validation Value,validation_value from clv_validation
+analytics,customer_churn_predictions,customer_unique_id,TEXT,True,False,False,dimension,Customer Unique Id,customer_unique_id from customer_churn_predictions
+analytics,customer_churn_predictions,churn_probability,DOUBLE PRECISION,True,False,False,measure,Churn Probability,churn_probability from customer_churn_predictions
+analytics,customer_churn_predictions,churn_prediction,BIGINT,True,False,False,measure,Churn Prediction,churn_prediction from customer_churn_predictions
+analytics,customer_churn_predictions,churn_status,TEXT,True,False,False,dimension,Churn Status,churn_status from customer_churn_predictions
+analytics,customer_churn_predictions,risk_level,TEXT,True,False,False,dimension,Risk Level,risk_level from customer_churn_predictions
+analytics,customer_churn_predictions,prediction_cutoff_date,TIMESTAMP,True,False,False,dimension,Prediction Cutoff Date,prediction_cutoff_date from customer_churn_predictions
+analytics,customer_churn_predictions,future_horizon_days,BIGINT,True,False,False,measure,Future Horizon Days,future_horizon_days from customer_churn_predictions
+analytics,customer_churn_predictions,model_name,TEXT,True,False,False,dimension,Model Name,model_name from customer_churn_predictions
+analytics,customer_churn_predictions,model_threshold,DOUBLE PRECISION,True,False,False,measure,Model Threshold,model_threshold from customer_churn_predictions
+analytics,customer_churn_model_metrics,model,TEXT,True,False,False,dimension,Model,model from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,threshold,DOUBLE PRECISION,True,False,False,measure,Threshold,threshold from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,accuracy,DOUBLE PRECISION,True,False,False,measure,Accuracy,accuracy from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,precision,DOUBLE PRECISION,True,False,False,measure,Precision,precision from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,recall,DOUBLE PRECISION,True,False,False,measure,Recall,recall from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,f1,DOUBLE PRECISION,True,False,False,measure,F1,f1 from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,roc_auc,DOUBLE PRECISION,True,False,False,measure,Roc Auc,roc_auc from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,predicted_churned,BIGINT,True,False,False,measure,Predicted Churned,predicted_churned from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,predicted_active,BIGINT,True,False,False,measure,Predicted Active,predicted_active from customer_churn_model_metrics
+analytics,customer_churn_model_metrics,predicts_only_one_class,BOOLEAN,True,False,False,dimension,Predicts Only One Class,predicts_only_one_class from customer_churn_model_metrics
+feature_engineered,order_features,order_id,TEXT,True,False,False,dimension,Order Id,order_id from order_features
+feature_engineered,order_features,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from order_features
+feature_engineered,order_features,order_status,TEXT,True,False,False,dimension,Order Status,order_status from order_features
+feature_engineered,order_features,order_purchase_timestamp,TIMESTAMP,True,False,False,dimension,Order Purchase Timestamp,order_purchase_timestamp from order_features
+feature_engineered,order_features,order_approved_at,TIMESTAMP,True,False,False,dimension,Order Approved At,order_approved_at from order_features
+feature_engineered,order_features,order_delivered_carrier_date,TIMESTAMP,True,False,False,dimension,Order Delivered Carrier Date,order_delivered_carrier_date from order_features
+feature_engineered,order_features,order_delivered_customer_date,TIMESTAMP,True,False,False,dimension,Order Delivered Customer Date,order_delivered_customer_date from order_features
+feature_engineered,order_features,order_estimated_delivery_date,TIMESTAMP,True,False,False,dimension,Order Estimated Delivery Date,order_estimated_delivery_date from order_features
+feature_engineered,order_features,delivery_days,DOUBLE PRECISION,True,False,False,measure,Delivery Days,delivery_days from order_features
+feature_engineered,order_features,estimated_delivery_days,DOUBLE PRECISION,True,False,False,measure,Estimated Delivery Days,estimated_delivery_days from order_features
+feature_engineered,order_features,delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Delivery Delay Days,delivery_delay_days from order_features
+feature_engineered,order_features,order_year,BIGINT,True,False,False,dimension,Order Year,order_year from order_features
+feature_engineered,order_features,order_month,BIGINT,True,False,False,dimension,Order Month,order_month from order_features
+feature_engineered,order_features,order_quarter,BIGINT,True,False,False,measure,Order Quarter,order_quarter from order_features
+feature_engineered,order_features,order_weekday,TEXT,True,False,False,dimension,Order Weekday,order_weekday from order_features
+feature_engineered,order_features,delivery_status,TEXT,True,False,False,dimension,Delivery Status,delivery_status from order_features
+feature_engineered,order_features,total_items,DOUBLE PRECISION,True,False,False,measure,Total Items,total_items from order_features
+feature_engineered,order_features,total_product_value,DOUBLE PRECISION,True,False,False,measure,Total Product Value,total_product_value from order_features
+feature_engineered,order_features,total_freight_value,DOUBLE PRECISION,True,False,False,measure,Total Freight Value,total_freight_value from order_features
+feature_engineered,order_features,total_order_value,DOUBLE PRECISION,True,False,False,measure,Total Order Value,total_order_value from order_features
+feature_engineered,order_features,total_payment_value,DOUBLE PRECISION,True,False,False,measure,Total Payment Value,total_payment_value from order_features
+feature_engineered,order_features,max_payment_installments,DOUBLE PRECISION,True,False,False,measure,Max Payment Installments,max_payment_installments from order_features
+feature_engineered,order_features,payment_methods_used,DOUBLE PRECISION,True,False,False,measure,Payment Methods Used,payment_methods_used from order_features
+feature_engineered,order_features,review_score,DOUBLE PRECISION,True,False,False,measure,Review Score,review_score from order_features
+feature_engineered,order_features,is_delivered,BIGINT,True,False,False,measure,Is Delivered,is_delivered from order_features
+feature_engineered,order_features,is_cancelled,BIGINT,True,False,False,measure,Is Cancelled,is_cancelled from order_features
+feature_engineered,order_features,is_late,BIGINT,True,False,False,measure,Is Late,is_late from order_features
+feature_engineered,order_features,is_on_time,BIGINT,True,False,False,dimension,Is On Time,is_on_time from order_features
+feature_engineered,order_features,purchase_year,INTEGER,True,False,False,dimension,Purchase Year,purchase_year from order_features
+feature_engineered,order_features,purchase_month,INTEGER,True,False,False,dimension,Purchase Month,purchase_month from order_features
+feature_engineered,order_features,purchase_quarter,INTEGER,True,False,False,measure,Purchase Quarter,purchase_quarter from order_features
+feature_engineered,order_features,purchase_day_of_week,INTEGER,True,False,False,measure,Purchase Day Of Week,purchase_day_of_week from order_features
+feature_engineered,order_features,purchase_hour,INTEGER,True,False,False,measure,Purchase Hour,purchase_hour from order_features
+feature_engineered,order_features,purchase_date,DATE,True,False,False,dimension,Purchase Date,purchase_date from order_features
+feature_engineered,order_features,purchase_month_start,TIMESTAMP,True,False,False,dimension,Purchase Month Start,purchase_month_start from order_features
+feature_engineered,customer_features,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from customer_features
+feature_engineered,customer_features,customer_unique_id,TEXT,True,False,False,dimension,Customer Unique Id,customer_unique_id from customer_features
+feature_engineered,customer_features,customer_zip_code_prefix,BIGINT,True,False,False,measure,Customer Zip Code Prefix,customer_zip_code_prefix from customer_features
+feature_engineered,customer_features,customer_city,TEXT,True,False,False,dimension,Customer City,customer_city from customer_features
+feature_engineered,customer_features,customer_state,TEXT,True,False,False,dimension,Customer State,customer_state from customer_features
+feature_engineered,customer_features,total_orders,BIGINT,True,False,False,measure,Total Orders,total_orders from customer_features
+feature_engineered,customer_features,total_spend,DOUBLE PRECISION,True,False,False,measure,Total Spend,total_spend from customer_features
+feature_engineered,customer_features,average_order_value,DOUBLE PRECISION,True,False,False,measure,Average Order Value,average_order_value from customer_features
+feature_engineered,customer_features,total_items_purchased,DOUBLE PRECISION,True,False,False,measure,Total Items Purchased,total_items_purchased from customer_features
+feature_engineered,customer_features,average_review_score,DOUBLE PRECISION,True,False,False,measure,Average Review Score,average_review_score from customer_features
+feature_engineered,customer_features,average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Average Delivery Days,average_delivery_days from customer_features
+feature_engineered,customer_features,average_delivery_delay_days,DOUBLE PRECISION,True,False,False,measure,Average Delivery Delay Days,average_delivery_delay_days from customer_features
+feature_engineered,customer_features,late_orders,BIGINT,True,False,False,measure,Late Orders,late_orders from customer_features
+feature_engineered,customer_features,cancelled_orders,BIGINT,True,False,False,measure,Cancelled Orders,cancelled_orders from customer_features
+feature_engineered,customer_features,first_purchase_date,TIMESTAMP,True,False,False,dimension,First Purchase Date,first_purchase_date from customer_features
+feature_engineered,customer_features,last_purchase_date,TIMESTAMP,True,False,False,dimension,Last Purchase Date,last_purchase_date from customer_features
+feature_engineered,customer_features,customer_lifetime_days,DOUBLE PRECISION,True,False,False,dimension,Customer Lifetime Days,customer_lifetime_days from customer_features
+feature_engineered,customer_features,purchase_frequency,DOUBLE PRECISION,True,False,False,measure,Purchase Frequency,purchase_frequency from customer_features
+feature_engineered,customer_features,recency_days,DOUBLE PRECISION,True,False,False,measure,Recency Days,recency_days from customer_features
+feature_engineered,customer_features,frequency,BIGINT,True,False,False,measure,Frequency,frequency from customer_features
+feature_engineered,customer_features,monetary,DOUBLE PRECISION,True,False,False,measure,Monetary,monetary from customer_features
+feature_engineered,customer_features,recency_score,TEXT,True,False,False,dimension,Recency Score,recency_score from customer_features
+feature_engineered,customer_features,frequency_score,TEXT,True,False,False,dimension,Frequency Score,frequency_score from customer_features
+feature_engineered,customer_features,monetary_score,TEXT,True,False,False,dimension,Monetary Score,monetary_score from customer_features
+feature_engineered,customer_features,rfm_score,TEXT,True,False,False,dimension,Rfm Score,rfm_score from customer_features
+feature_engineered,product_features,product_id,TEXT,True,False,False,dimension,Product Id,product_id from product_features
+feature_engineered,product_features,product_category_name,TEXT,True,False,False,dimension,Product Category Name,product_category_name from product_features
+feature_engineered,product_features,product_name_lenght,DOUBLE PRECISION,True,False,False,measure,Product Name Lenght,product_name_lenght from product_features
+feature_engineered,product_features,product_description_lenght,DOUBLE PRECISION,True,False,False,measure,Product Description Lenght,product_description_lenght from product_features
+feature_engineered,product_features,product_photos_qty,DOUBLE PRECISION,True,False,False,measure,Product Photos Qty,product_photos_qty from product_features
+feature_engineered,product_features,product_weight_g,DOUBLE PRECISION,True,False,False,measure,Product Weight G,product_weight_g from product_features
+feature_engineered,product_features,product_length_cm,DOUBLE PRECISION,True,False,False,measure,Product Length Cm,product_length_cm from product_features
+feature_engineered,product_features,product_height_cm,DOUBLE PRECISION,True,False,False,measure,Product Height Cm,product_height_cm from product_features
+feature_engineered,product_features,product_width_cm,DOUBLE PRECISION,True,False,False,measure,Product Width Cm,product_width_cm from product_features
+feature_engineered,product_features,product_category_name_english,TEXT,True,False,False,dimension,Product Category Name English,product_category_name_english from product_features
+feature_engineered,product_features,total_units_sold,BIGINT,True,False,False,measure,Total Units Sold,total_units_sold from product_features
+feature_engineered,product_features,total_revenue,DOUBLE PRECISION,True,False,False,measure,Total Revenue,total_revenue from product_features
+feature_engineered,product_features,average_price,DOUBLE PRECISION,True,False,False,measure,Average Price,average_price from product_features
+feature_engineered,product_features,total_freight_value,DOUBLE PRECISION,True,False,False,measure,Total Freight Value,total_freight_value from product_features
+feature_engineered,product_features,unique_orders,BIGINT,True,False,False,measure,Unique Orders,unique_orders from product_features
+feature_engineered,product_features,unique_sellers,BIGINT,True,False,False,measure,Unique Sellers,unique_sellers from product_features
+feature_engineered,product_features,average_product_review_score,DOUBLE PRECISION,True,False,False,measure,Average Product Review Score,average_product_review_score from product_features
+feature_engineered,product_features,review_count,BIGINT,True,False,False,measure,Review Count,review_count from product_features
+feature_engineered,seller_features,seller_id,TEXT,True,False,False,dimension,Seller Id,seller_id from seller_features
+feature_engineered,seller_features,seller_zip_code_prefix,BIGINT,True,False,False,measure,Seller Zip Code Prefix,seller_zip_code_prefix from seller_features
+feature_engineered,seller_features,seller_city,TEXT,True,False,False,dimension,Seller City,seller_city from seller_features
+feature_engineered,seller_features,seller_state,TEXT,True,False,False,dimension,Seller State,seller_state from seller_features
+feature_engineered,seller_features,total_items_sold,BIGINT,True,False,False,measure,Total Items Sold,total_items_sold from seller_features
+feature_engineered,seller_features,total_revenue,DOUBLE PRECISION,True,False,False,measure,Total Revenue,total_revenue from seller_features
+feature_engineered,seller_features,average_item_price,DOUBLE PRECISION,True,False,False,measure,Average Item Price,average_item_price from seller_features
+feature_engineered,seller_features,total_freight_value,DOUBLE PRECISION,True,False,False,measure,Total Freight Value,total_freight_value from seller_features
+feature_engineered,seller_features,unique_products_sold,BIGINT,True,False,False,measure,Unique Products Sold,unique_products_sold from seller_features
+feature_engineered,seller_features,unique_orders,BIGINT,True,False,False,measure,Unique Orders,unique_orders from seller_features
+feature_engineered,monthly_sales_features,purchase_month_start,TIMESTAMP,True,False,False,dimension,Purchase Month Start,purchase_month_start from monthly_sales_features
+feature_engineered,monthly_sales_features,total_orders,BIGINT,True,False,False,measure,Total Orders,total_orders from monthly_sales_features
+feature_engineered,monthly_sales_features,total_revenue,DOUBLE PRECISION,True,False,False,measure,Total Revenue,total_revenue from monthly_sales_features
+feature_engineered,monthly_sales_features,total_items_sold,DOUBLE PRECISION,True,False,False,measure,Total Items Sold,total_items_sold from monthly_sales_features
+feature_engineered,monthly_sales_features,average_order_value,DOUBLE PRECISION,True,False,False,measure,Average Order Value,average_order_value from monthly_sales_features
+feature_engineered,monthly_sales_features,average_delivery_days,DOUBLE PRECISION,True,False,False,measure,Average Delivery Days,average_delivery_days from monthly_sales_features
+feature_engineered,monthly_sales_features,average_review_score,DOUBLE PRECISION,True,False,False,measure,Average Review Score,average_review_score from monthly_sales_features
+feature_engineered,monthly_sales_features,late_orders,BIGINT,True,False,False,measure,Late Orders,late_orders from monthly_sales_features
+feature_engineered,monthly_sales_features,cancelled_orders,BIGINT,True,False,False,measure,Cancelled Orders,cancelled_orders from monthly_sales_features
+feature_engineered,monthly_sales_features,revenue_growth,DOUBLE PRECISION,True,False,False,measure,Revenue Growth,revenue_growth from monthly_sales_features
+feature_engineered,monthly_sales_features,order_growth,DOUBLE PRECISION,True,False,False,measure,Order Growth,order_growth from monthly_sales_features
+feature_engineered,category_features,product_category_name,TEXT,True,False,False,dimension,Product Category Name,product_category_name from category_features
+feature_engineered,category_features,unique_products,BIGINT,True,False,False,measure,Unique Products,unique_products from category_features
+feature_engineered,category_features,total_units_sold,BIGINT,True,False,False,measure,Total Units Sold,total_units_sold from category_features
+feature_engineered,category_features,total_revenue,DOUBLE PRECISION,True,False,False,measure,Total Revenue,total_revenue from category_features
+feature_engineered,category_features,average_product_price,DOUBLE PRECISION,True,False,False,measure,Average Product Price,average_product_price from category_features
+forecasting,model_evaluation,Model,TEXT,True,False,False,dimension,Model,Model from model_evaluation
+forecasting,model_evaluation,MAE,DOUBLE PRECISION,True,False,False,measure,Mae,MAE from model_evaluation
+forecasting,model_evaluation,RMSE,DOUBLE PRECISION,True,False,False,measure,Rmse,RMSE from model_evaluation
+forecasting,model_evaluation,sMAPE,DOUBLE PRECISION,True,False,False,measure,Smape,sMAPE from model_evaluation
+forecasting,model_evaluation,WAPE,DOUBLE PRECISION,True,False,False,measure,Wape,WAPE from model_evaluation
+forecasting,historical_sales_forecast,forecast_period,TIMESTAMP,True,False,False,dimension,Forecast Period,forecast_period from historical_sales_forecast
+forecasting,historical_sales_forecast,actual_sales,DOUBLE PRECISION,True,False,False,measure,Actual Sales,actual_sales from historical_sales_forecast
+forecasting,historical_sales_forecast,transactions,BIGINT,True,False,False,measure,Transactions,transactions from historical_sales_forecast
+forecasting,historical_sales_forecast,model_name,TEXT,True,False,False,dimension,Model Name,model_name from historical_sales_forecast
+forecasting,historical_sales_forecast,forecast_frequency,TEXT,True,False,False,dimension,Forecast Frequency,forecast_frequency from historical_sales_forecast
+forecasting,historical_sales_forecast,forecast_type,TEXT,True,False,False,dimension,Forecast Type,forecast_type from historical_sales_forecast
+forecasting,future_sales_forecast,forecast_period,TIMESTAMP,True,False,False,dimension,Forecast Period,forecast_period from future_sales_forecast
+forecasting,future_sales_forecast,predicted_sales,DOUBLE PRECISION,True,False,False,measure,Predicted Sales,predicted_sales from future_sales_forecast
+forecasting,future_sales_forecast,model_name,TEXT,True,False,False,dimension,Model Name,model_name from future_sales_forecast
+forecasting,future_sales_forecast,forecast_frequency,TEXT,True,False,False,dimension,Forecast Frequency,forecast_frequency from future_sales_forecast
+forecasting,future_sales_forecast,forecast_type,TEXT,True,False,False,dimension,Forecast Type,forecast_type from future_sales_forecast
+public,customers,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from customers
+public,customers,customer_unique_id,TEXT,True,False,False,dimension,Customer Unique Id,customer_unique_id from customers
+public,customers,customer_zip_code_prefix,BIGINT,True,False,False,measure,Customer Zip Code Prefix,customer_zip_code_prefix from customers
+public,customers,customer_city,TEXT,True,False,False,dimension,Customer City,customer_city from customers
+public,customers,customer_state,TEXT,True,False,False,dimension,Customer State,customer_state from customers
+public,geolocation,geolocation_zip_code_prefix,BIGINT,True,False,False,measure,Geolocation Zip Code Prefix,geolocation_zip_code_prefix from geolocation
+public,geolocation,geolocation_lat,DOUBLE PRECISION,True,False,False,measure,Geolocation Lat,geolocation_lat from geolocation
+public,geolocation,geolocation_lng,DOUBLE PRECISION,True,False,False,measure,Geolocation Lng,geolocation_lng from geolocation
+public,geolocation,geolocation_city,TEXT,True,False,False,dimension,Geolocation City,geolocation_city from geolocation
+public,geolocation,geolocation_state,TEXT,True,False,False,dimension,Geolocation State,geolocation_state from geolocation
+public,order_items,order_id,TEXT,True,False,False,dimension,Order Id,order_id from order_items
+public,order_items,order_item_id,BIGINT,True,False,False,measure,Order Item Id,order_item_id from order_items
+public,order_items,product_id,TEXT,True,False,False,dimension,Product Id,product_id from order_items
+public,order_items,seller_id,TEXT,True,False,False,dimension,Seller Id,seller_id from order_items
+public,order_items,shipping_limit_date,TEXT,True,False,False,dimension,Shipping Limit Date,shipping_limit_date from order_items
+public,order_items,price,DOUBLE PRECISION,True,False,False,measure,Price,price from order_items
+public,order_items,freight_value,DOUBLE PRECISION,True,False,False,measure,Freight Value,freight_value from order_items
+public,order_payments,order_id,TEXT,True,False,False,dimension,Order Id,order_id from order_payments
+public,order_payments,payment_sequential,BIGINT,True,False,False,measure,Payment Sequential,payment_sequential from order_payments
+public,order_payments,payment_type,TEXT,True,False,False,dimension,Payment Type,payment_type from order_payments
+public,order_payments,payment_installments,BIGINT,True,False,False,measure,Payment Installments,payment_installments from order_payments
+public,order_payments,payment_value,DOUBLE PRECISION,True,False,False,measure,Payment Value,payment_value from order_payments
+public,order_reviews,review_id,TEXT,True,False,False,dimension,Review Id,review_id from order_reviews
+public,order_reviews,order_id,TEXT,True,False,False,dimension,Order Id,order_id from order_reviews
+public,order_reviews,review_score,BIGINT,True,False,False,measure,Review Score,review_score from order_reviews
+public,order_reviews,review_comment_title,TEXT,True,False,False,dimension,Review Comment Title,review_comment_title from order_reviews
+public,order_reviews,review_comment_message,TEXT,True,False,False,dimension,Review Comment Message,review_comment_message from order_reviews
+public,order_reviews,review_creation_date,TEXT,True,False,False,dimension,Review Creation Date,review_creation_date from order_reviews
+public,order_reviews,review_answer_timestamp,TEXT,True,False,False,dimension,Review Answer Timestamp,review_answer_timestamp from order_reviews
+public,orders,order_id,TEXT,True,False,False,dimension,Order Id,order_id from orders
+public,orders,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from orders
+public,orders,order_status,TEXT,True,False,False,dimension,Order Status,order_status from orders
+public,orders,order_purchase_timestamp,TEXT,True,False,False,dimension,Order Purchase Timestamp,order_purchase_timestamp from orders
+public,orders,order_approved_at,TEXT,True,False,False,dimension,Order Approved At,order_approved_at from orders
+public,orders,order_delivered_carrier_date,TEXT,True,False,False,dimension,Order Delivered Carrier Date,order_delivered_carrier_date from orders
+public,orders,order_delivered_customer_date,TEXT,True,False,False,dimension,Order Delivered Customer Date,order_delivered_customer_date from orders
+public,orders,order_estimated_delivery_date,TEXT,True,False,False,dimension,Order Estimated Delivery Date,order_estimated_delivery_date from orders
+public,orders,delivery_days,BIGINT,True,False,False,measure,Delivery Days,delivery_days from orders
+public,orders,estimated_delivery_days,BIGINT,True,False,False,measure,Estimated Delivery Days,estimated_delivery_days from orders
+public,orders,delivery_delay_days,BIGINT,True,False,False,measure,Delivery Delay Days,delivery_delay_days from orders
+public,orders,order_year,BIGINT,True,False,False,dimension,Order Year,order_year from orders
+public,orders,order_month,BIGINT,True,False,False,dimension,Order Month,order_month from orders
+public,orders,order_quarter,BIGINT,True,False,False,measure,Order Quarter,order_quarter from orders
+public,orders,order_weekday,TEXT,True,False,False,dimension,Order Weekday,order_weekday from orders
+public,orders,delivery_status,TEXT,True,False,False,dimension,Delivery Status,delivery_status from orders
+public,products,product_id,TEXT,True,False,False,dimension,Product Id,product_id from products
+public,products,product_category_name,TEXT,True,False,False,dimension,Product Category Name,product_category_name from products
+public,products,product_name_lenght,DOUBLE PRECISION,True,False,False,measure,Product Name Lenght,product_name_lenght from products
+public,products,product_description_lenght,DOUBLE PRECISION,True,False,False,measure,Product Description Lenght,product_description_lenght from products
+public,products,product_photos_qty,DOUBLE PRECISION,True,False,False,measure,Product Photos Qty,product_photos_qty from products
+public,products,product_weight_g,DOUBLE PRECISION,True,False,False,measure,Product Weight G,product_weight_g from products
+public,products,product_length_cm,DOUBLE PRECISION,True,False,False,measure,Product Length Cm,product_length_cm from products
+public,products,product_height_cm,DOUBLE PRECISION,True,False,False,measure,Product Height Cm,product_height_cm from products
+public,products,product_width_cm,DOUBLE PRECISION,True,False,False,measure,Product Width Cm,product_width_cm from products
+public,products,product_category_name_english,TEXT,True,False,False,dimension,Product Category Name English,product_category_name_english from products
+public,sellers,seller_id,TEXT,True,False,False,dimension,Seller Id,seller_id from sellers
+public,sellers,seller_zip_code_prefix,BIGINT,True,False,False,measure,Seller Zip Code Prefix,seller_zip_code_prefix from sellers
+public,sellers,seller_city,TEXT,True,False,False,dimension,Seller City,seller_city from sellers
+public,sellers,seller_state,TEXT,True,False,False,dimension,Seller State,seller_state from sellers
+public,category_translation,product_category_name,TEXT,True,False,False,dimension,Product Category Name,product_category_name from category_translation
+public,category_translation,product_category_name_english,TEXT,True,False,False,dimension,Product Category Name English,product_category_name_english from category_translation
+public,churn_model_comparison,model,TEXT,True,False,False,dimension,Model,model from churn_model_comparison
+public,churn_model_comparison,accuracy,DOUBLE PRECISION,True,False,False,measure,Accuracy,accuracy from churn_model_comparison
+public,churn_model_comparison,precision,DOUBLE PRECISION,True,False,False,measure,Precision,precision from churn_model_comparison
+public,churn_model_comparison,recall,DOUBLE PRECISION,True,False,False,measure,Recall,recall from churn_model_comparison
+public,churn_model_comparison,f1_score,DOUBLE PRECISION,True,False,False,measure,F1 Score,f1_score from churn_model_comparison
+public,churn_model_comparison,roc_auc,DOUBLE PRECISION,True,False,False,measure,Roc Auc,roc_auc from churn_model_comparison
+public,customer_churn_predictions,customer_identifier,TEXT,True,False,False,dimension,Customer Identifier,customer_identifier from customer_churn_predictions
+public,customer_churn_predictions,first_order_date,TIMESTAMP,True,False,False,dimension,First Order Date,first_order_date from customer_churn_predictions
+public,customer_churn_predictions,last_order_date,TIMESTAMP,True,False,False,dimension,Last Order Date,last_order_date from customer_churn_predictions
+public,customer_churn_predictions,order_count,BIGINT,True,False,False,measure,Order Count,order_count from customer_churn_predictions
+public,customer_churn_predictions,lifetime_days,BIGINT,True,False,False,dimension,Lifetime Days,lifetime_days from customer_churn_predictions
+public,customer_churn_predictions,recency_days,BIGINT,True,False,False,measure,Recency Days,recency_days from customer_churn_predictions
+public,customer_churn_predictions,churned,BIGINT,True,False,False,measure,Churned,churned from customer_churn_predictions
+public,customer_churn_predictions,churn_probability,DOUBLE PRECISION,True,False,False,measure,Churn Probability,churn_probability from customer_churn_predictions
+public,customer_churn_predictions,churn_prediction,BIGINT,True,False,False,measure,Churn Prediction,churn_prediction from customer_churn_predictions
+public,customer_churn_predictions,risk_level,TEXT,True,False,False,dimension,Risk Level,risk_level from customer_churn_predictions
+recommendations,product_recommendations,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from product_recommendations
+recommendations,product_recommendations,recommended_product_id,TEXT,True,False,False,dimension,Recommended Product Id,recommended_product_id from product_recommendations
+recommendations,product_recommendations,rank,BIGINT,True,False,False,measure,Rank,rank from product_recommendations
+recommendations,product_recommendations,recommendation_score,DOUBLE PRECISION,True,False,False,measure,Recommendation Score,recommendation_score from product_recommendations
+recommendations,product_recommendations,recommendation_method,TEXT,True,False,False,dimension,Recommendation Method,recommendation_method from product_recommendations
+recommendations,product_recommendations,fallback_type,TEXT,True,False,False,dimension,Fallback Type,fallback_type from product_recommendations
+recommendations,product_recommendations,customer_history_size,BIGINT,True,False,False,measure,Customer History Size,customer_history_size from product_recommendations
+recommendations,recommendation_evaluation,method,TEXT,True,False,False,dimension,Method,method from recommendation_evaluation
+recommendations,recommendation_evaluation,customers_evaluated,BIGINT,True,False,False,measure,Customers Evaluated,customers_evaluated from recommendation_evaluation
+recommendations,recommendation_evaluation,precision_at_k,DOUBLE PRECISION,True,False,False,measure,Precision At K,precision_at_k from recommendation_evaluation
+recommendations,recommendation_evaluation,recall_at_k,DOUBLE PRECISION,True,False,False,measure,Recall At K,recall_at_k from recommendation_evaluation
+recommendations,recommendation_evaluation,hit_rate_at_k,DOUBLE PRECISION,True,False,False,measure,Hit Rate At K,hit_rate_at_k from recommendation_evaluation
+recommendations,recommendation_evaluation,catalog_coverage,DOUBLE PRECISION,True,False,False,measure,Catalog Coverage,catalog_coverage from recommendation_evaluation
+recommendations,recommendation_data_quality,validation_name,TEXT,True,False,False,dimension,Validation Name,validation_name from recommendation_data_quality
+recommendations,recommendation_data_quality,value,TEXT,True,False,False,dimension,Value,value from recommendation_data_quality
+recommendations,recommendation_data_quality,status,TEXT,True,False,False,dimension,Status,status from recommendation_data_quality
+recommendations,powerbi_product_recommendations,customer_id,TEXT,True,False,False,dimension,Customer Id,customer_id from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,recommended_product_id,TEXT,True,False,False,dimension,Recommended Product Id,recommended_product_id from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,rank,BIGINT,True,False,False,measure,Rank,rank from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,recommendation_score,DOUBLE PRECISION,True,False,False,measure,Recommendation Score,recommendation_score from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,recommendation_method,TEXT,True,False,False,dimension,Recommendation Method,recommendation_method from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,fallback_type,TEXT,True,False,False,dimension,Fallback Type,fallback_type from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,customer_history_size,BIGINT,True,False,False,measure,Customer History Size,customer_history_size from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,recommendation_generated_at,TIMESTAMP,True,False,False,dimension,Recommendation Generated At,recommendation_generated_at from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,source_interaction_mode,TEXT,True,False,False,dimension,Source Interaction Mode,source_interaction_mode from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,source_schema,TEXT,True,False,False,dimension,Source Schema,source_schema from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,source_table,TEXT,True,False,False,dimension,Source Table,source_table from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,evaluation_split_method,TEXT,True,False,False,dimension,Evaluation Split Method,evaluation_split_method from powerbi_product_recommendations
+recommendations,powerbi_product_recommendations,selected_primary_method,TEXT,True,False,False,dimension,Selected Primary Method,selected_primary_method from powerbi_product_recommendations
+sales_analytics,overall_sales_kpis,total_orders,BIGINT,True,False,False,measure,Total Orders,total_orders from overall_sales_kpis
+sales_analytics,overall_sales_kpis,delivered_orders,BIGINT,True,False,False,measure,Delivered Orders,delivered_orders from overall_sales_kpis
+sales_analytics,overall_sales_kpis,cancelled_orders,BIGINT,True,False,False,measure,Cancelled Orders,cancelled_orders from overall_sales_kpis
+sales_analytics,overall_sales_kpis,total_items,NUMERIC,True,False,False,measure,Total Items,total_items from overall_sales_kpis
+sales_analytics,overall_sales_kpis,average_items_per_order,NUMERIC,True,False,False,measure,Average Items Per Order,average_items_per_order from overall_sales_kpis
+sales_analytics,overall_sales_kpis,total_product_value,NUMERIC,True,False,False,measure,Total Product Value,total_product_value from overall_sales_kpis
+sales_analytics,overall_sales_kpis,total_freight_value,NUMERIC,True,False,False,measure,Total Freight Value,total_freight_value from overall_sales_kpis
+sales_analytics,overall_sales_kpis,average_freight_per_order,NUMERIC,True,False,False,measure,Average Freight Per Order,average_freight_per_order from overall_sales_kpis
+sales_analytics,overall_sales_kpis,total_order_value,NUMERIC,True,False,False,measure,Total Order Value,total_order_value from overall_sales_kpis
+sales_analytics,overall_sales_kpis,average_order_value,NUMERIC,True,False,False,measure,Average Order Value,average_order_value from overall_sales_kpis
+sales_analytics,overall_sales_kpis,average_delivery_days,NUMERIC,True,False,False,measure,Average Delivery Days,average_delivery_days from overall_sales_kpis
+sales_analytics,overall_sales_kpis,late_delivery_rate,NUMERIC,True,False,False,measure,Late Delivery Rate,late_delivery_rate from overall_sales_kpis
+sales_analytics,overall_sales_kpis,average_review_score,NUMERIC,True,False,False,measure,Average Review Score,average_review_score from overall_sales_kpis
+sales_analytics,monthly_sales,sales_month,DATE,True,False,False,dimension,Sales Month,sales_month from monthly_sales
+sales_analytics,monthly_sales,total_orders,BIGINT,True,False,False,measure,Total Orders,total_orders from monthly_sales
+sales_analytics,monthly_sales,total_order_value,NUMERIC,True,False,False,measure,Total Order Value,total_order_value from monthly_sales
+sales_analytics,monthly_sales,average_order_value,NUMERIC,True,False,False,measure,Average Order Value,average_order_value from monthly_sales
+sales_analytics,monthly_sales,total_product_value,NUMERIC,True,False,False,measure,Total Product Value,total_product_value from monthly_sales
+sales_analytics,monthly_sales,total_freight_value,NUMERIC,True,False,False,measure,Total Freight Value,total_freight_value from monthly_sales
+sales_analytics,order_status_summary,order_status,TEXT,True,False,False,dimension,Order Status,order_status from order_status_summary
+sales_analytics,order_status_summary,order_count,BIGINT,True,False,False,measure,Order Count,order_count from order_status_summary
+sales_analytics,delivery_performance,delivery_status,TEXT,True,False,False,dimension,Delivery Status,delivery_status from delivery_performance
+sales_analytics,delivery_performance,order_count,BIGINT,True,False,False,measure,Order Count,order_count from delivery_performance
+sales_analytics,delivery_performance,average_delivery_days,NUMERIC,True,False,False,measure,Average Delivery Days,average_delivery_days from delivery_performance

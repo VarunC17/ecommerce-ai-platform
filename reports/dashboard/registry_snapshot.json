@@ -1,0 +1,12 @@
+{
+    "dataset_registry": "<class 'dict'>",
+    "metadata_registry": "<class 'dict'>",
+    "relationship_registry": "<class 'dict'>",
+    "fact_registry": "<class 'dict'>",
+    "dimension_registry": "<class 'dict'>",
+    "dashboard_registry": "<class 'dict'>",
+    "kpi_registry": "<class 'dict'>",
+    "export_registry": "<class 'dict'>",
+    "validation_registry": "<class 'dict'>",
+    "powerbi_registry": "<class 'dict'>"
+}

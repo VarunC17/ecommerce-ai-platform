@@ -1,0 +1,51 @@
+{
+    "table_profiles": {
+        "rows": 54,
+        "columns": [
+            "schema",
+            "table",
+            "row_count",
+            "duplicate_rows",
+            "memory_usage_mb",
+            "columns",
+            "generated_at"
+        ]
+    },
+    "column_quality": {
+        "rows": 457,
+        "columns": [
+            "schema",
+            "table",
+            "column",
+            "null_count",
+            "null_percentage",
+            "unique_values"
+        ]
+    },
+    "dataset_grain": {
+        "rows": 54,
+        "columns": [
+            "schema",
+            "table",
+            "possible_grain",
+            "candidate_keys",
+            "row_count"
+        ]
+    },
+    "summary": {
+        "tables_profiled": 54,
+        "columns_profiled": 457,
+        "relationships_found": 0,
+        "relationships_validated": 0,
+        "generated_at": "2026-08-01 18:09:09.579928"
+    },
+    "export_verification": {
+        "rows": 33,
+        "columns": [
+            "table",
+            "row_count",
+            "status",
+            "checked_at"
+        ]
+    }
+}
