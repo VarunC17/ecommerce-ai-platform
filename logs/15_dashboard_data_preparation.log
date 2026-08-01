@@ -1,0 +1,46 @@
+2026-08-01 18:03:57,333 | INFO | Dashboard preparation notebook initialized
+2026-08-01 18:04:10,724 | INFO | PostgreSQL connection successful
+2026-08-01 18:04:16,527 | INFO | All registries initialized
+2026-08-01 18:04:32,050 | INFO | Discovered schemas: ['ai_insights', 'analytics', 'feature_engineered', 'forecasting', 'information_schema', 'public', 'recommendations', 'sales_analytics']
+2026-08-01 18:04:37,703 | INFO | Source schemas identified: ['ai_insights', 'analytics', 'feature_engineered', 'forecasting', 'public', 'recommendations', 'sales_analytics']
+2026-08-01 18:04:44,276 | INFO | Discovered 54 tables
+2026-08-01 18:04:57,015 | INFO | Discovered 457 columns
+2026-08-01 18:05:15,220 | INFO | Registry summary generated: {'schemas': 3, 'tables': 54, 'columns': 457, 'keys': 54, 'generated_at': datetime.datetime(2026, 8, 1, 18, 5, 15, 220120)}
+2026-08-01 18:05:46,449 | INFO | Column metadata enrichment completed
+2026-08-01 18:08:31,092 | INFO | Relationships discovered: 0
+2026-08-01 18:09:09,580 | INFO | Validation summary created: {'tables_profiled': 54, 'columns_profiled': 457, 'relationships_found': 0, 'relationships_validated': 0, 'generated_at': datetime.datetime(2026, 8, 1, 18, 9, 9, 579928)}
+2026-08-01 18:09:44,660 | INFO | Dashboard dataset classification completed
+2026-08-01 18:10:10,702 | INFO | Star schema design created
+2026-08-01 18:10:42,068 | INFO | Power BI registry created
+2026-08-01 18:10:50,903 | INFO | Dashboard architecture summary: {'datasets_classified': 54, 'fact_candidates': 19, 'dimension_candidates': 8, 'time_columns_found': 33, 'created_at': datetime.datetime(2026, 8, 1, 18, 10, 50, 903369)}
+2026-08-01 18:11:19,004 | INFO | Dashboard schema created or verified
+2026-08-01 18:17:54,657 | WARNING | Fact skipped: fact_customer_features
+2026-08-01 18:18:07,878 | INFO | Fact created: fact_customer_segmentation (99441 rows)
+2026-08-01 18:18:08,279 | INFO | Fact created: fact_customer_lifetime_value (99441 rows)
+2026-08-01 18:18:08,860 | INFO | Fact created: fact_customer_churn_predictions (86924 rows)
+2026-08-01 18:18:10,163 | INFO | Fact created: fact_order_features (99441 rows)
+2026-08-01 18:18:11,201 | INFO | Fact created: fact_customer_features (99441 rows)
+2026-08-01 18:18:11,466 | INFO | Fact created: fact_product_features (32951 rows)
+2026-08-01 18:18:11,487 | INFO | Fact created: fact_seller_features (3095 rows)
+2026-08-01 18:18:11,502 | INFO | Fact created: fact_historical_sales_forecast (1299 rows)
+2026-08-01 18:18:12,104 | INFO | Fact created: fact_customers (99441 rows)
+2026-08-01 18:18:15,234 | INFO | Fact created: fact_geolocation (738332 rows)
+2026-08-01 18:18:15,973 | INFO | Fact created: fact_order_items (112650 rows)
+2026-08-01 18:18:16,394 | INFO | Fact created: fact_order_payments (103886 rows)
+2026-08-01 18:18:17,073 | INFO | Fact created: fact_order_reviews (99224 rows)
+2026-08-01 18:18:17,928 | INFO | Fact created: fact_orders (99441 rows)
+2026-08-01 18:18:18,088 | INFO | Fact created: fact_products (32951 rows)
+2026-08-01 18:18:18,109 | INFO | Fact created: fact_sellers (3095 rows)
+2026-08-01 18:18:18,730 | INFO | Fact created: fact_customer_churn_predictions (99441 rows)
+2026-08-01 18:18:25,397 | INFO | Fact created: fact_product_recommendations (986670 rows)
+2026-08-01 18:18:34,045 | INFO | Fact created: fact_powerbi_product_recommendations (986670 rows)
+2026-08-01 18:20:28,783 | INFO | Dashboard metadata generated
+2026-08-01 18:20:36,817 | INFO | Data dictionary created
+2026-08-01 18:21:11,248 | INFO | Dashboard optimization completed
+2026-08-01 18:21:25,710 | INFO | Dashboard export verification completed
+2026-08-01 18:21:34,965 | INFO | Validation report generated
+2026-08-01 18:22:16,697 | INFO | Dashboard readiness: {'database_connection': True, 'dashboard_schema_created': True, 'fact_tables': 19, 'dimension_tables': 8, 'calendar_available': True, 'data_dictionary_available': True, 'powerbi_configuration_available': True, 'ready_for_powerbi': True, 'generated_at': datetime.datetime(2026, 8, 1, 18, 22, 16, 691862)}
+2026-08-01 18:22:49,668 | INFO | Final completion summary generated
+2026-08-01 18:22:57,216 | INFO | Registry snapshot saved
+2026-08-01 18:23:19,683 | INFO | Power BI handoff report generated
+2026-08-01 18:23:27,397 | INFO | 15_dashboard_data_preparation.ipynb completed successfully
