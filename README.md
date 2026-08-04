@@ -439,15 +439,9 @@ Possible future enhancements include:
 - Deep learning forecasting models
 - Automated anomaly detection
 - Natural language query support
-
----
-
-## License
-
-This project is released under the MIT License.
-
+  
 ---
 
 ## Author
 
-Developed by **Varun C** as an end-to-end data analytics, machine learning, and business intelligence portfolio project demonstrating practical applications of data engineering, predictive analytics, and interactive reporting.
+Developed by **Varun Contractor** as an end-to-end data analytics, machine learning, and business intelligence portfolio project demonstrating practical applications of data engineering, predictive analytics, and interactive reporting.
